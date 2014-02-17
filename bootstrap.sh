@@ -20,7 +20,9 @@ git clone https://github.com/isaacs/npm.git
 cd npm
 make install
 
-apt-get -y install r-base
+sed -i '$ a deb http://cran.ms.unimelb.edu.au/bin/linux/ubuntu precise/' /etc/apt/sources.list
+apt-get update
+apt-get -y --force-yes install r-base
 cd /vagrant
 git clone https://github.com/edenduthie/palsR.git
 cd palsR
