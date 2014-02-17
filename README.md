@@ -16,7 +16,7 @@ Instructions:
 9. 'node sendmessage.js'
 10. 'node server.js'
 11. Open a new terminal and 'cd palsvagrant' 'vagrant ssh'.
-12. 'cd /vagrant/palsWeb/pals'
+12. 'cd /vagrant/palsweb/pals'
 13. 'mrt'
 14. ^C
 15. 'meteor --port=80'
