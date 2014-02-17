@@ -26,9 +26,16 @@ git clone https://github.com/edenduthie/palsR.git
 cd palsR
 R CMD INSTALL plotrix
 R CMD INSTALL pals
-
+mkdir /pals
+mkdir /pals/executions
+mkidr /pals/data
 R --slave --vanilla --quiet --no-save <<RSCRIPT
 install.packages('RJSONIO',repos='http://cran.us.r-project.org')
+RSCRIPT
+apt-get -y install libnetcdf-dev
+apt-get -y install netcdf-bin
+R --slave --vanilla --quiet --no-save <<RSCRIPT
+install.packages('ncdf',repos='http://cran.us.r-project.org')
 RSCRIPT
 
 cd /vagrant
@@ -43,13 +50,7 @@ mount --bind ~/pals/.meteor/ /vagrant/palsweb/pals/.meteor/
 sed -i '$ a sudo mount --bind /root/pals/.meteor/ /vagrant/palsweb/pals/.meteor/' ~/.bashrc
 
 
-apt-get -y install erlang
-cd ~
-sed -i '$ a deb http://www.rabbitmq.com/debian/ testing main' /etc/apt/sources.list
-apt-get update
-wget http://www.rabbitmq.com/rabbitmq-signing-key-public.asc
-apt-key add rabbitmq-signing-key-public.asc
-apt-get -y --force-yes install rabbitmq-server
+apt-get -y install redis-server
 
 cd /vagrant
 git clone https://github.com/edenduthie/palsnoder.git
