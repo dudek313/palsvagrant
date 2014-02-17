@@ -1,0 +1,6 @@
+.DS_Store
+.vagrant
+palsWeb
+palsR
+palsnoder
+node_modules
