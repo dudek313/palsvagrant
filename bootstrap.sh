@@ -31,13 +31,12 @@ R CMD INSTALL pals
 mkdir /pals
 mkdir /pals/executions
 mkidr /pals/data
-R --slave --vanilla --quiet --no-save <<RSCRIPT
-install.packages('RJSONIO',repos='http://cran.us.r-project.org')
-RSCRIPT
 apt-get -y install libnetcdf-dev
 apt-get -y install netcdf-bin
 R --slave --vanilla --quiet --no-save <<RSCRIPT
+install.packages('RJSONIO',repos='http://cran.us.r-project.org')
 install.packages('ncdf',repos='http://cran.us.r-project.org')
+install.packages('boot',repos='http://cran.us.r-project.org')
 RSCRIPT
 
 cd /vagrant
