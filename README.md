@@ -7,7 +7,7 @@ Instructions:
 
 1. Install Vagrant for your system from http://www.vagrantup.com/downloads.html.
 2. Install VirtualBox for your system from https://www.virtualbox.org/wiki/Downloads.
-3. Clone this repo 'git clone https://github.com/edenduthie/palsvagrant.git'
+3. Clone this repo 'git clone https://github.com/dudek313/palsvagrant.git'
 4. Start up the virtual machine 'cd palsvagrant' 'vagrant up'. This will take a while as it will download the precise64 base box.
 5. Log into the pals machine with 'vagrant ssh'.
 6. Swap to root 'sudo su'.
