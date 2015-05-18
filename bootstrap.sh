@@ -24,7 +24,7 @@ sed -i '$ a deb http://cran.ms.unimelb.edu.au/bin/linux/ubuntu precise/' /etc/ap
 apt-get update
 apt-get -y --force-yes install r-base
 cd /vagrant
-git clone https://github.com/edenduthie/palsR.git
+git clone https://github.com/dudek313/palsR.git
 cd palsR
 R CMD INSTALL plotrix
 R CMD INSTALL pals
@@ -41,7 +41,7 @@ RSCRIPT
 
 cd /vagrant
 npm install meteor
-git clone https://github.com/edenduthie/palsweb.git
+git clone https://github.com/dudek313/palsweb.git
 curl https://install.meteor.com | /bin/sh
 npm install -g meteorite
 cd ~
@@ -54,7 +54,7 @@ sed -i '$ a sudo mount --bind /root/pals/.meteor/ /vagrant/palsweb/pals/.meteor/
 apt-get -y install redis-server
 
 cd /vagrant
-git clone https://github.com/edenduthie/palsnoder.git
+git clone https://github.com/dudek313/palsnoder.git
 
-git config --global user.name "Eden Duthie"
-git config --global user.email eduthie@gmail.com
+git config --global user.name "David Fuchs"
+git config --global user.email d.fuchs@unsw.edu.au
